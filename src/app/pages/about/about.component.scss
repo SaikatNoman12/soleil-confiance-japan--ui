@@ -1,0 +1,484 @@
+@import'../../../theme/variables';
+
+
+/* ---- home-area design start:- ---- */
+.about-area {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ---- home-area design end. ---- */
+
+
+/* ---- consultation-header design start:- ---- */
+.about-header {
+    width: 100%;
+    background-image: url(../../../assets/images/jpg-image/bg_about_mv.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+    padding-top: 30px;
+}
+
+.header-child {
+    width: 100%;
+    padding: 0px 15px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-child h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 60px;
+    color: #fff;
+    font-family: $font-en-primary-3;
+    font-weight: 600;
+    text-shadow: 0px 0px 10px rgb(0 0 0 / 60%);
+}
+
+
+@media (max-width:700px) {
+    .header-child {
+        padding: 0px 0px;
+    }
+
+}
+
+/* ---- consultation-header design end. ---- */
+
+
+
+/* ---- pagination design start ---- */
+.pagination {
+    width: 100%;
+    background: #f9ecc9;
+    padding: 10px;
+}
+
+.pagination-child {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.pagination-child ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.pagination-child ul li a::before {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #666;
+    margin: 0px 11px;
+}
+
+.pagination-child ul li:first-child a::before {
+    content: "";
+    display: none;
+}
+
+.pagination-child ul li a {
+    // margin-right: 10px;
+    color: purple;
+    cursor: pointer;
+    display: block;
+    font-family: $font-en-primary-3;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pagination-child ul li:last-child a {
+    margin-right: 10px;
+    cursor: context-menu;
+    color: #666;
+}
+
+@media (max-width:700px) {
+
+    .pagination-child {
+        padding: 0px 0px;
+    }
+}
+
+/* ---- pagination design end ---- */
+
+
+/* ---- about-area-child design start ---- */
+.about-area-child {
+    width: 100%;
+    margin-top: 40px;
+    height: auto;
+}
+
+.about-child {
+    display: grid;
+    padding: 0px 15px;
+    grid-template-columns: 80% 20%;
+    height: auto;
+    position: relative;
+}
+
+
+@media (max-width:992px) {
+    .about-child {
+        max-width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:700px) {
+    .about-child {
+        padding: 0px 0px;
+        margin: auto;
+    }
+}
+
+/* -- left side design start:- -- */
+.left-side {
+    background-color: transparent;
+    margin-right: 20px;
+    height: auto;
+}
+
+@media (max-width:992px) {
+    .left-side {
+        margin-right: 0px;
+    }
+}
+
+/* -- consult area start -- */
+/* details area */
+.details-area {
+    width: 100%;
+}
+
+.first {
+    width: 100%;
+}
+
+.first-data {
+    width: 100%;
+}
+
+.details {
+    width: 100%;
+}
+
+
+.details p {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-en-primary-3;
+    letter-spacing: 1px;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+/* step design start:- */
+.step {
+    width: 100%;
+    height: auto;
+    margin-top: 46px;
+}
+
+.step-first-img {
+    width: 100%;
+}
+
+.step-first-img img {
+    width: 100%;
+}
+
+/* step design end. */
+
+/* step-consultation design start */
+.step-header {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.step-heder-title{
+    position: relative;
+}
+
+.step-heder-title span {
+    display: block;
+    border: 2px solid #f8b500;
+    background: #f8b500;
+    color: #fff !important;
+    padding: 25px 0px;
+    text-align: center;
+    font-family: $font-en-primary-3;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.step-heder-title span::after{
+    content: "\f063";
+    font-family: FontAwesome;
+    font-size: 50px;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: #f8b500;
+}
+
+/* -- left side design end. -- */
+
+
+/* -- right-sidebar design start:- -- */
+.right-sidebar {
+    background-color: #ffff;
+    height: auto;
+    width: 100%;
+    position: relative;
+    // top: 0px;
+}
+
+
+.right-sidebar aside {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+// aside one
+
+/* global use for sidebar(aside) */
+.right-sidebar aside:nth-child(1) {
+    background-color: #765727;
+}
+
+.right-sidebar aside ul {
+    list-style: none;
+}
+
+.right-sidebar aside:nth-child(1) ul li {
+    display: block;
+    width: 100%;
+}
+
+/* separate use for sidebar(aside)-1 */
+.right-sidebar aside:nth-child(1) ul:first-child li a {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.right-sidebar aside:nth-child(1) ul li a:hover {
+    opacity: .7;
+}
+
+.right-sidebar aside:nth-child(1) ul li a img {
+    width: 100%;
+}
+
+.right-sidebar aside:nth-child(1) ul:last-child li a {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+
+/* separate use for sidebar(aside)-2 */
+.aside-title-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.aside-title-image img {
+    width: 60%;
+}
+
+.right-sidebar aside:nth-child(2) {
+    background-color: #fbf2e5;
+    border: 1px solid #765727;
+}
+
+.right-sidebar aside:nth-child(2) ul li {
+    display: block;
+    width: 100%;
+}
+
+.right-sidebar aside:nth-child(2) ul:first-child li a {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.right-sidebar aside:nth-child(2) ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 20px 0px;
+    color: #ffff;
+    font-size: 16px;
+    font-family: $font-en-primary-3;
+    font-weight: 500;
+    background-color: #765727;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    letter-spacing: .5px;
+}
+
+.right-sidebar aside:nth-child(2) ul li a::before {
+    content: url(../../../assets/images/png-image/arr.png);
+    // display: flex;
+    margin-top: 3px;
+    margin-right: 8px;
+}
+
+.right-sidebar aside:nth-child(2) ul li a:hover {
+    background-color: #96733b;
+}
+
+// search-bar
+.search-bar {
+    margin-top: 9px;
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid #765727;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0px 6px 0px;
+}
+
+.input-search {
+    width: 75%;
+}
+
+.input-search input {
+    width: 100%;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px;
+    line-height: 42px;
+    padding: 0px 10px;
+    color: #333;
+    font-family: $font-en-primary-3;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-icon {
+    width: 22%;
+    border-left: 1px solid #765727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.search-icon button {
+    border: 0px;
+    outline: 0px;
+    background-color: transparent !important;
+    text-align: center;
+}
+
+.search-icon button i {
+    color: #765727 !important;
+    font-size: 16px;
+    padding: 2px 2px 0px 0px;
+    position: relative;
+}
+
+
+/* separate use for sidebar(aside)-3 */
+.right-sidebar aside:nth-child(3) {
+    background-color: #ececec;
+}
+
+
+.right-sidebar aside:nth-child(3) ul li a:hover {
+    opacity: .7;
+}
+
+.right-sidebar aside:nth-child(3) ul li a img {
+    width: 100%;
+
+}
+
+@media (max-width:992px) {
+    .right-sidebar {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 111111;
+    }
+
+
+    .right-sidebar aside:nth-child(2) ul li a {
+        font-size: 20px;
+    }
+}
+
+
+/* ----- show aside bar design start ----- */
+.show-aside-bar {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: inline-block;
+    z-index: 1111111111;
+    display: none;
+
+}
+
+
+.show-aside-bar a {
+    width: 75px;
+    height: 75px;
+    text-transform: uppercase;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-en-primary-3;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffff;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px 0px #333;
+    cursor: pointer;
+}
+
+
+@media (max-width:992px) {
+    .show-aside-bar {
+        display: block;
+    }
+}
+
+/* -- right-sidebar design end. -- */
+
+
+/* ---- about-area-child design end. ---- */

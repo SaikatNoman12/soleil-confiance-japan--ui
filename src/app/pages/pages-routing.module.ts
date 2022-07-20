@@ -8,13 +8,21 @@ const routes: Routes = [
     component:PagesComponent,
     children:[
       {
-       path:"",
+       path:'',
        redirectTo:"home",
        pathMatch:"full" 
       },
       {
-        path:"",
+        path:"home",
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path:'consultation',
+        loadChildren: () => import('./consultation/consultation.module').then(m => m.ConsultationModule)
+      },
+      {
+        path:'about',
+        loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
       }
       
     ]

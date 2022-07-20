@@ -13,11 +13,12 @@ p {
 /* ---- header design start:- ---- */
 .header {
     width: 100%;
-    background-color: #fdf3f3a0;
+    background-color: rgba(255, 255, 255, 0.644);
     padding: 10px 10px;
     position: fixed;
     bottom: 0px;
     left: 0px;
+    z-index: 11111111111111111;
 }
 
 /* ---- header design end. ---- */
@@ -141,7 +142,7 @@ p {
 
 @media (max-width:888px) {
 
-    .container{
+    .container {
         padding: 0px;
     }
 
@@ -223,10 +224,4 @@ p {
 
 }
 
-
 /* ---- nav-bottom design end ---- */
-
-
-// font-family: $font-en-primary-3;
-// font-size: 0px;
-// font-weight: 400;

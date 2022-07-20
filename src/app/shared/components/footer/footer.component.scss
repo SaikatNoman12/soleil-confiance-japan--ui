@@ -1,0 +1,267 @@
+@import '../../../../theme/variables';
+
+
+/* ----- footer-area design start:- ----- */
+.footer-area {
+    width: 100%;
+    height: auto;
+    background-color: $icon-default-color;
+}
+
+/* ----- footer area design end. ----- */
+
+
+/* ----- scroll-bar design start:- ----- */
+.scroll-bar {
+    width: 100%;
+}
+
+.scroll-bar a {
+    width: 100%;
+    padding: 10px;
+    background: $color-smooth-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-bar a i {
+    font-size: 20px;
+    color: $icon-default-color;
+}
+
+.scroll-bar a span {
+    display: block;
+    margin-top: 6px;
+    font-family: $font-en-primary-3;
+    font-size: 16px;
+    font-weight: 400;
+    color: $icon-default-color;
+    letter-spacing: .5px;
+}
+
+/* ----- scroll-bar design end. ----- */
+
+
+
+/* ----- footer design start:- ----- */
+.footer {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 60px 15px;
+}
+
+.footer-side ul {
+    list-style: none;
+}
+
+.footer-side ul li {
+    margin-bottom: 20px;
+}
+
+.footer-side ul li a {
+    display: inline;
+    cursor: pointer;
+}
+
+.footer-side ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.footer-side ul li a span {
+    font-size: 15px;
+    font-weight: 400;
+    color: $color-smooth-black;
+    font-family: $font-en-primary-3;
+}
+
+.footer-side ul li:first-child {
+    padding-bottom: 5px;
+}
+
+.footer-side:nth-child(1) ul {
+
+    li:first-child {
+        border-bottom: 1px solid #765727;
+
+        a i {
+            color: #765727;
+            font-size: 18px;
+        }
+
+        a span {
+            color: #765727;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $font-en-primary-3;
+        }
+    }
+
+    a:hover i {
+        color: #765727;
+    }
+
+    a:hover span {
+        color: #765727;
+    }
+
+}
+
+.footer-side:nth-child(2) ul {
+
+    li:first-child {
+        border-bottom: 1px solid #765727;
+
+        a i {
+            color: #f8b500;
+            font-size: 18px;
+        }
+
+        a span {
+            color: #f8b500;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $font-en-primary-3;
+        }
+    }
+
+    a:hover i {
+        color: #f8b500;
+    }
+
+    a:hover span {
+        color: #f8b500;
+    }
+}
+
+.footer-side:nth-child(3) ul {
+
+    li:first-child {
+        border-bottom: 1px solid #765727;
+
+        a i {
+            color: #0f86f6;
+            font-size: 18px;
+        }
+
+        a span {
+            color: #0f86f6;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $font-en-primary-3;
+        }
+    }
+
+    a:hover i {
+        color: #0f86f6;
+    }
+
+    a:hover span {
+        color: #0f86f6;
+    }
+}
+
+.footer-side:nth-child(4) ul {
+
+    li:first-child {
+        border-bottom: 1px solid #765727;
+        height: 100%;
+
+        a i {
+            color: #0099ff;
+            font-size: 18px;
+        }
+
+        a span {
+            color: #0099ff;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $font-en-primary-3;
+        }
+    }
+
+    a:hover i {
+        color: #0099ff;
+    }
+
+    a:hover span {
+        color: #0099ff;
+    }
+}
+
+@media (max-width:1200px) {
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width:830px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 24px;
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width:700px) {
+    .footer {
+        padding: 60px 0px;
+    }
+}
+
+@media (max-width:655px) {
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 24px 0px;
+    }
+}
+
+/* ----- footer design end. ----- */
+
+
+/* ----- footer-bottom design start:- ----- */
+.footer-bottom {
+    width: 100%;
+    padding: 20px 0px;
+    background-color: #f9ecd9;
+    margin-bottom: 134px;
+}
+
+@media (max-width:888px) {
+    .footer-bottom {
+        margin-bottom: 194px;
+    }
+}
+
+.footer-bottom-child {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.footer-bottom-child p {
+    margin: 0px;
+    color: $color-smooth-black;
+    font-family: $font-en-primary-3;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+
+
+
+
+@media (max-width:700px) {
+    .footer-bottom-child {
+        padding: 0px 0px;
+    }
+}
+
+/* ----- footer-bottom design end. ----- */

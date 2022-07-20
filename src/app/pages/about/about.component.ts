@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
-  showConsult = false;
-  showInvestigate = true;
 
 
   showSidebar = true;
@@ -168,20 +166,9 @@ export class HomeComponent implements OnInit {
   ];
 
 
-  onShowConsult() {
-    this.showConsult = true;
-    this.showInvestigate = false;
-  }
 
-
-  onShowInvestigate() {
-    this.showConsult = false;
-    this.showInvestigate = true;
-  }
-
-
-  onShowSideBar(){
-    this.showSidebar =! this.showSidebar;
+  onShowSideBar() {
+    this.showSidebar = !this.showSidebar;
   }
 
 }

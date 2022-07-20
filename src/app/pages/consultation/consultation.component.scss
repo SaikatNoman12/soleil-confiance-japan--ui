@@ -1,90 +1,167 @@
 @import'../../../theme/variables';
 
 
-/* ---- home-area design start:- ---- */
-.home-area {
+/* ---- consultation-area design start:- ---- */
+.consultation-area {
     width: 100%;
     min-height: 100vh;
 }
 
-/* ---- home-area design end. ---- */
+/* ---- consultation-area design end. ---- */
 
 
-/* ---- home-area design start:- ---- */
-.home-header {
+/* ---- consultation-header design start:- ---- */
+.consultation-header {
     width: 100%;
-    background-image: url(../../../assets/images/jpg-image/pcmv_bg.jpg);
+    background-image: url(../../../assets/images/jpg-image/consultation.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 70%;
-    background-position: top center;
+    background-size: cover;
+    background-position: left center;
     background-attachment: scroll;
     padding-top: 30px;
 }
 
-.swiper {
+.header-child {
     width: 100%;
     padding: 0px 15px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.swipe {
-    padding: 10px 10px 17px 10px;
-    background-color: #fff;
-    background: url(../../../assets/images/jpg-image/mv_shadow.png) no-repeat center bottom #fff;
-    // background-repeat: no-repeat;
-    background-size: 100%;
-    // background-position: center bottom;
-    background-attachment: scroll;
-}
-
-.swipe-img {
+.header-child h1 img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.swipe-img a {
-    width: 100%;
-}
-
-.swipe-img a img {
-    width: 100%;
-    height: 100%;
-}
 
 @media (max-width:700px) {
-    .swiper {
+    .header-child {
         padding: 0px 0px;
     }
 
 }
 
-/* ---- home-area design end. ---- */
+/* ---- consultation-header design end. ---- */
+
+
+/* ---- pagination design start ---- */
+.pagination {
+    width: 100%;
+    background: #f9ecc9;
+    padding: 10px;
+}
+
+.pagination-child {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.pagination-child ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pagination-child ul li {
+    // margin-right: 10px;
+}
+
+.pagination-child ul li a::before {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #666;
+    margin: 0px 11px;
+}
+
+.pagination-child ul li:first-child a::before {
+    content: "";
+    display: none;
+}
+
+.pagination-child ul li a {
+    // margin-right: 10px;
+    color: purple;
+    cursor: pointer;
+    display: block;
+    font-family: $font-en-primary-3;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pagination-child ul li:last-child a {
+    margin-right: 10px;
+    cursor: context-menu;
+    color: #666;
+}
 
 
 
-/* ---- home-area-child design end. ---- */
-.home-area-child {
+@media (max-width:700px) {
+
+    .pagination-child {
+        padding: 0px 0px;
+    }
+}
+
+/* ---- pagination design end ---- */
+
+
+/* ---- free-consultation design start ---- */
+.free-consultations {
+    width: 100%;
+    padding: 20px 0px;
+    background: #775829;
+}
+
+
+.free-consultation-child {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.free-consultation-child h1 {
+    font-family: $font-en-primary-3;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffff;
+    margin-bottom: 0px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+@media (max-width:700px) {
+    .free-consultation-child {
+        padding: 0px 0px;
+    }
+}
+
+/* ---- free-consultation design end ---- */
+
+
+
+/* ---- consultation-area-child design end. ---- */
+.consultation-area-child {
     width: 100%;
     margin-top: 40px;
     height: auto;
 }
 
-.home-child {
-    display: grid;
+.consultation-child {
+    width: 100%;
     padding: 0px 15px;
-    grid-template-columns: 80% 20%;
     height: auto;
     position: relative;
 }
 
-
-@media (max-width:992px) {
-    .home-child {
-        max-width: 100%;
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
 @media (max-width:700px) {
-    .home-child {
+    .consultation-child {
         padding: 0px 0px;
         margin: auto;
     }
@@ -93,109 +170,8 @@
 /* -- left side design start:- -- */
 .left-side {
     background-color: transparent;
-    margin-right: 20px;
     height: auto;
 }
-
-/* sections-btns */
-.section-btns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 60px;
-}
-
-.section-btn a {
-    display: block;
-    background-color: #ffff;
-    padding: 14px 0px;
-    text-align: center;
-    font-family: $font-en-primary-3;
-    font-size: 22px;
-    font-weight: 500;
-    color: #ee8888;
-    letter-spacing: 1px;
-    border: 1px solid #ee8888;
-    position: relative;
-    cursor: pointer;
-}
-
-
-// use active btn class and cut this code start:- 
-
-.section-btn a:hover {
-    background-color: #ee8888;
-    color: #fff;
-}
-
-
-.section-btn a::before {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-top: 20px solid transparent;
-    // opacity: 0;
-    // visibility: hidden;
-}
-
-.section-btn a:hover::before {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-top: 20px solid #ee8888;
-} 
-
-// use active btn class and cut this code end. 
-
-
-// use for btn active show:-
-.active-btn {
-    background-color: #ee8888 !important;
-    color: #fff !important;
-}
-
-.active-btn::before {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-top: 20px solid #ef8889 !important;
-}
-
-@media (max-width:992px) {
-    .left-side {
-        margin-right: 0px !important;
-    }
-}
-
-
-@media (max-width:556px) {
-    .section-btn a {
-        padding: 10px 0px;
-        font-size: 16px;
-    }
-}
-
-@media (max-width:400px) {
-    .section-btn a {
-        padding: 7px 0px;
-        font-size: 15px;
-    }
-}
-
 
 
 /* -- consult area start -- */
@@ -227,7 +203,7 @@
     color: #b85204;
     text-align: left;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     font-family: $font-en-primary-3;
     letter-spacing: 1px;
     margin-bottom: 30px;
@@ -316,23 +292,17 @@
 /* free-consultation-cards start */
 .free-consultation-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 24px;
 }
 
-@media (max-width:1086px) {
-    .free-consultation-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width:992px) {
+@media (max-width:1200px) {
     .free-consultation-cards {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width:830px) {
+@media (max-width:880px) {
     .free-consultation-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -438,7 +408,8 @@
 .circle-text p {
     border: 1px solid #ccc;
     border-radius: 15px;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     padding: 2px 18px;
     font-family: $font-en-primary-3;
     font-size: 12px;
@@ -600,14 +571,12 @@ p {
 .details3-img {
     padding-left: 15px;
     min-height: 294px;
-    max-height: 294px;
     width: 100%;
 }
 
 .details3-img img {
     max-width: 100%;
     height: 100%;
-    // object-fit: contain;
 }
 
 
@@ -726,245 +695,3 @@ p {
 }
 
 /* -- left side design end. -- */
-
-
-/* -- right-sidebar design start:- -- */
-.right-sidebar {
-    background-color: #ffff;
-    height: auto;
-    width: 100%;
-    position: relative;
-    // top: 0px;
-}
-
-
-.right-sidebar aside {
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-// aside one
-
-/* global use for sidebar(aside) */
-.right-sidebar aside:nth-child(1) {
-    background-color: #765727;
-}
-
-.right-sidebar aside ul {
-    list-style: none;
-}
-
-.right-sidebar aside:nth-child(1) ul li {
-    display: block;
-    width: 100%;
-}
-
-/* separate use for sidebar(aside)-1 */
-.right-sidebar aside:nth-child(1) ul:first-child li a {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-
-.right-sidebar aside:nth-child(1) ul li a:hover {
-    opacity: .7;
-}
-
-.right-sidebar aside:nth-child(1) ul li a img {
-    width: 100%;
-}
-
-.right-sidebar aside:nth-child(1) ul:last-child li a {
-    display: block;
-    width: 100%;
-    margin-bottom: 2px;
-}
-
-
-/* separate use for sidebar(aside)-2 */
-.aside-title-image {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 14px;
-}
-
-.aside-title-image img {
-    width: 60%;
-}
-
-.right-sidebar aside:nth-child(2) {
-    background-color: #fbf2e5;
-    border: 1px solid #765727;
-}
-
-.right-sidebar aside:nth-child(2) ul li {
-    display: block;
-    width: 100%;
-}
-
-.right-sidebar aside:nth-child(2) ul:first-child li a {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.right-sidebar aside:nth-child(2) ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 2px;
-    padding: 20px 0px;
-    color: #ffff;
-    font-size: 16px;
-    font-family: $font-en-primary-3;
-    font-weight: 500;
-    background-color: #765727;
-    position: relative;
-    text-align: left;
-    overflow: hidden;
-    letter-spacing: .5px;
-}
-
-.right-sidebar aside:nth-child(2) ul li a::before {
-    content: url(../../../assets/images/png-image/arr.png);
-    // display: flex;
-    margin-top: 3px;
-    margin-right: 8px;
-}
-
-.right-sidebar aside:nth-child(2) ul li a:hover {
-    background-color: #96733b;
-}
-
-// search-bar
-.search-bar {
-    margin-top: 9px;
-    width: 100%;
-    height: 42px;
-    background-color: #fff;
-    border-radius: 50px;
-    overflow: hidden;
-    border: 1px solid #765727;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 7px 0px 6px 0px;
-}
-
-.input-search {
-    width: 75%;
-}
-
-.input-search input {
-    width: 100%;
-    background-color: transparent;
-    outline: 0px;
-    border: 0px;
-    line-height: 42px;
-    padding: 0px 10px;
-    color: #333;
-    font-family: $font-en-primary-3;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.search-icon {
-    width: 22%;
-    border-left: 1px solid #765727;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.search-icon button {
-    border: 0px;
-    outline: 0px;
-    background-color: transparent !important;
-    text-align: center;
-}
-
-.search-icon button i {
-    color: #765727 !important;
-    font-size: 16px;
-    padding: 2px 2px 0px 0px;
-    position: relative;
-}
-
-
-/* separate use for sidebar(aside)-3 */
-.right-sidebar aside:nth-child(3) {
-    background-color: #ececec;
-}
-
-
-.right-sidebar aside:nth-child(3) ul li a:hover {
-    opacity: .7;
-}
-
-.right-sidebar aside:nth-child(3) ul li a img {
-    width: 100%;
-
-}
-
-@media (max-width:992px) {
-    .right-sidebar {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 111111;
-    }
-
-
-    .right-sidebar aside:nth-child(2) ul li a {
-        font-size: 20px;
-    }
-}
-
-
-/* ----- show aside bar design start ----- */
-.show-aside-bar {
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    display: inline-block;
-    z-index: 1111111111;
-    display: none;
-
-}
-
-
-.show-aside-bar a {
-    width: 75px;
-    height: 75px;
-    text-transform: uppercase;
-    background-color: red;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font-en-primary-3;
-    font-size: 18px;
-    font-weight: 500;
-    color: #ffff;
-    border: 2px solid #fff;
-    box-shadow: 0px 0px 10px 0px #333;
-    cursor: pointer;
-}
-
-
-@media (max-width:992px) {
-    .show-aside-bar {
-        display: block;
-    }
-}
-/* -- right-sidebar design end. -- */
-
-
-/* ---- home-area-child design end. ---- */
