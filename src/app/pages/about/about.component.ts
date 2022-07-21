@@ -12,6 +12,7 @@ export class AboutComponent implements OnInit {
   showSidebar = true;
 
 
+
   constructor() { }
 
   ngOnInit(): void {
@@ -166,9 +167,21 @@ export class AboutComponent implements OnInit {
   ];
 
 
-
   onShowSideBar() {
     this.showSidebar = !this.showSidebar;
+  }
+
+
+  showDropFirst = false;
+
+  onshowDropFirst(){
+    this.showDropFirst =! this.showDropFirst;
+  }
+
+  showDropSecond = true;
+
+  onshowDropSecond(){
+    this.showDropSecond =! this.showDropSecond;
   }
 
 }
