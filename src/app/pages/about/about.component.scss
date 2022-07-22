@@ -38,12 +38,34 @@
     font-family: $font-en-primary-3;
     font-weight: 600;
     text-shadow: 0px 0px 10px rgb(0 0 0 / 60%);
+    line-height: 62px;
 }
 
 
 @media (max-width:700px) {
     .header-child {
         padding: 0px 0px;
+    }
+
+}
+
+@media (max-width:584px) {
+
+    .header-child h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width:476px) {
+    .header-child h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:416px) {
+    .header-child h1 {
+        font-size: 30px;
     }
 
 }
@@ -124,7 +146,7 @@
     padding: 0px 15px;
     grid-template-columns: 80% 20%;
     height: auto;
-    position: relative;
+    // position: relative;
 }
 
 
@@ -292,14 +314,14 @@
 }
 
 .step-define a::before {
-    content: "\f061";
+    content: "\f063";
     font-family: FontAwesome;
     position: absolute;
     color: #dd0024;
     font-size: 34px;
-    top: -16px;
+    top: -30px;
     left: 50%;
-    transform: rotate(90deg) translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .step-define a i {
@@ -351,6 +373,7 @@
     font-weight: 500;
     letter-spacing: 2px;
     position: relative;
+    line-height: 36px;
 }
 
 .dropdown-parent-title a {
@@ -363,18 +386,20 @@
     letter-spacing: 1px;
     padding-bottom: 3px;
     cursor: context-menu;
+    line-height: 24px;
 }
 
 
 .step-dropdown {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .step-data a {
     display: block;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     text-align: center;
@@ -384,7 +409,8 @@
     color: #fff;
     background: #f8b500;
     border-radius: 15px;
-    padding: 14px 0;
+    padding: 9px 7px;
+    line-height: 34px;
     border: 1px solid #fff;
     letter-spacing: .5px;
     position: relative;
@@ -392,7 +418,8 @@
     cursor: pointer;
 }
 
-.step-data a:hover{
+
+.step-data a:hover {
     background: #f8b600b9;
 }
 
@@ -401,26 +428,39 @@
     font-size: 20px;
     margin-right: 6px;
     transition: .2s;
-    padding-top: 1px;
-    margin-top: 1px;
+    padding: 8.5px 0px 0px 0px;
+}
+
+@media (max-width:556px) {
+    .step-data a {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .step-data a i {
+        font-size: 16px;
+        padding: 3.5px 0px 0px 0px;
+    }
 }
 
 // step-data2
 .step-data2 a {
-    padding: 11px 0px;
+    padding: 8px 7px;
 }
+
 .step-data2 a span {
-    padding-top: 8px;
+    padding-top: 2px;
     color: white;
     font-size: 18px;
     margin-right: 7px;
 }
 
 // step-data3
-.step-data3 a{
+.step-data3 a {
     color: purple;
 }
-.step-data3 a:hover{
+
+.step-data3 a:hover {
     background-color: #f8b500;
     color: #333;
 }
@@ -428,12 +468,45 @@
 .step-data3 a i {
     color: purple;
 }
+
 .step-data3 a:hover i {
     color: #333;
 }
 
+@media (max-width:556px) {
+
+    .step-data2 a span {
+        font-size: 16px;
+        padding-top: 1px;
+    }
+
+    .step-data2 a i {
+        padding: 3.5px 0px 0px 0px;
+    }
+
+    .step-data3 a i {
+        padding: 3.5px 0px 0px 0px;
+    }
+
+}
+
 .drop-down-menu {
     padding-left: 6px;
+    overflow: hidden;
+    transition: all 10s linear;
+    animation: down 2s linear 1 alternate;
+    max-height: 2500px;
+}
+
+@keyframes down {
+    0% {
+        max-height: 0px;
+    }
+
+    100% {
+        max-height: auto;
+    }
+
 }
 
 .drop-down-title h3 {
@@ -443,7 +516,8 @@
     font-family: $font-en-primary-3;
     margin-bottom: 20px;
 }
-.drop-down-title span{
+
+.drop-down-title span {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -452,18 +526,19 @@
     justify-content: flex-start;
 }
 
-.drop-down-title span span{
-    margin-right: 6px;
-    font-size: 13px;
-    padding: 1.5px 0px 0px 1px;
-    border-radius: 50%;
-    border: 1px solid #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-}
+// .drop-down-title span span {
+//     margin-right: 6px;
+//     font-size: 13px;
+//     padding: 1.5px 0px 0px 1px;
+//     border-radius: 50%;
+//     border: 1px solid #333;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 18px;
+//     height: 18px;
+//     padding: 12px 11px 10px 10.5px;
+// }
 
 
 .dropdown-datas ul {
@@ -479,19 +554,21 @@
     margin-bottom: 30px;
     padding-bottom: 8px;
     cursor: context-menu;
+    line-height: 28px;
 }
 
-.dropdown-datas ul li .dropdown-child-title2 a{
+.dropdown-datas ul li .dropdown-child-title2 a {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
 
 }
 
-.dropdown-datas ul li .dropdown-child-title2 a span{
+.dropdown-datas ul li .dropdown-child-title2 a span {
+    margin-top: 2px;
     margin-right: 6px;
     font-size: 13px;
-    padding: 1.5px 0px 0px 1px;
+    padding: 12px 11px 10px 10.5px;
     border-radius: 50%;
     border: 1px solid #333;
     display: flex;
@@ -501,6 +578,23 @@
     height: 18px;
 }
 
+.dropdown-child-data {
+    overflow: hidden;
+    // transition: all 10s linear;
+    animation: downChild 4s linear 1 alternate;
+    max-height: 2000px;
+}
+
+@keyframes downChild {
+    0% {
+        max-height: 0px;
+    }
+
+    100% {
+        max-height: auto;
+    }
+
+}
 
 
 .dropdown-child-data h3 {
@@ -512,7 +606,7 @@
     // display: flex;
 }
 
-.dropdown-child-data h3 a{
+.dropdown-child-data h3 a {
     display: inline;
     font-family: $font-en-primary-3;
     font-size: 16px;
@@ -524,7 +618,7 @@
     cursor: pointer;
 }
 
-.dropdown-child-data h3 a i{
+.dropdown-child-data h3 a i {
     color: #f8b500;
     font-size: 16px;
     margin-right: 4px;
@@ -535,23 +629,25 @@
 
 
 // inheritance-foot start
-.inheritance-foot{
+.inheritance-foot {
     width: 100%;
 }
 
-.inheritance-foot-child{
+.inheritance-foot-child {
     margin-bottom: 45px;
 }
 
-.inheritance-foot-child h2{
+.inheritance-foot-child h2 {
     font-size: 16px;
     color: #333;
     font-weight: 500;
     font-family: $font-en-primary-3;
     margin-bottom: 20px;
+    line-height: 24px;
+
 }
 
-.inheritance-foot-child h3{
+.inheritance-foot-child h3 {
     margin-bottom: 20px;
     border-bottom: 1px solid #765727;
     color: #765727;
@@ -560,20 +656,21 @@
     font-weight: 600;
     letter-spacing: 1px;
     padding-bottom: 3px;
+    line-height: 24px;
+
 }
 
-.inheritance-foot-child h4{
+.inheritance-foot-child h4 {
     font-size: 16px;
     color: #ef8889;
     font-weight: 600;
     font-family: $font-en-primary-3;
     margin-bottom: 20px;
+    line-height: 24px;
+
 }
 
-.inheritance-foot-child h4 a{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.inheritance-foot-child h4 a {
     font-family: $font-en-primary-3;
     font-size: 16px;
     position: relative;
@@ -581,6 +678,7 @@
     cursor: pointer;
     color: #ef8889;
     text-decoration: underline;
+    line-height: 24px;
 }
 
 
@@ -588,17 +686,19 @@
     color: #ef8889;
     margin-right: 3px;
     font-size: 15px;
-    padding-top: 1px;
-    margin-top: 1px;
+    // padding-top: 1px;
+    margin-top: 2px;
+    text-decoration: underline;
 }
 
-.inheritance-foot-child h4 a:hover{
+.inheritance-foot-child h4 a:hover {
     color: purple;
 }
 
-.inheritance-foot-child h4 a:hover i{
+.inheritance-foot-child h4 a:hover i {
     color: purple;
 }
+
 
 // font-size: 16px;
 // color: #333;
@@ -793,21 +893,29 @@
 
 }
 
+
 @media (max-width:992px) {
+
     .right-sidebar {
         display: none;
-        width: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 111111;
+        // height: 100vh !important;
+        background-color: #fff;
+        // border-bottom: 3px solid red;
+        box-shadow: 16px -187px 50px 200px rgb(0 0 0 / 100%);
+
+        // use for aside show
+        &.is-open {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 111111;
+        }
     }
 
-
-    .right-sidebar aside:nth-child(2) ul li a {
-        font-size: 20px;
-    }
 }
+
 
 
 /* ----- show aside bar design start ----- */
@@ -848,6 +956,7 @@
 }
 
 /* -- right-sidebar design end. -- */
+
 
 
 /* ---- about-area-child design end. ---- */

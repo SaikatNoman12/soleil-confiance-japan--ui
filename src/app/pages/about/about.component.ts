@@ -12,6 +12,13 @@ export class AboutComponent implements OnInit {
   showSidebar = true;
 
 
+  /* accordionShow */ 
+  accordionShow: any = '';
+
+  /* accordionChildShow dropdown */
+  accordionChildShow: any = '';
+  
+
 
   constructor() { }
 
@@ -174,14 +181,41 @@ export class AboutComponent implements OnInit {
 
   showDropFirst = false;
 
-  onshowDropFirst(){
-    this.showDropFirst =! this.showDropFirst;
+  onshowDropFirst() {
+    this.showDropFirst = !this.showDropFirst;
   }
 
   showDropSecond = true;
 
-  onshowDropSecond(){
-    this.showDropSecond =! this.showDropSecond;
+  onshowDropSecond() {
+    this.showDropSecond = !this.showDropSecond;
+  }
+
+
+
+  onAccordionShow(id: any) {
+    if (this.accordionShow === id) {
+      this.accordionShow = '';
+    }
+    else {
+      this.accordionShow = id;
+    }
+  }
+
+
+  onAccordionChildShow(id: any) {
+    if (this.accordionChildShow === id) {
+      this.accordionChildShow = '';
+    }
+    else {
+      this.accordionChildShow = id;
+    }
+  }
+
+  isMenuOpen = false;
+
+  toggleMenu(): void{
+    this.isMenuOpen =! this.isMenuOpen; 
   }
 
 }

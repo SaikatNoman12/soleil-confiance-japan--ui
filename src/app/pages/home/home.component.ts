@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+// import Swiper core and required modules
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper';
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,7 +17,9 @@ export class HomeComponent implements OnInit {
   showInvestigate = true;
 
 
-  showSidebar = true;
+  // aside-bar show
+  isMenuOpen = false;
+
 
 
   constructor() { }
@@ -180,8 +188,17 @@ export class HomeComponent implements OnInit {
   }
 
 
-  onShowSideBar(){
-    this.showSidebar =! this.showSidebar;
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
+
+
+  // use for swiper slider
+  // onSwiper([swiper]: any) {
+  //   console.log(swiper);
+  // }
+  // onSlideChange() {
+  // }
+
 
 }

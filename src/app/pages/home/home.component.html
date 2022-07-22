@@ -4,15 +4,72 @@
         <div class="container">
             <!-- swiper start -->
             <div class="swiper">
-                <!-- Swiper-img start -->
-                <div class="swipe">
-                    <div class="swipe-img">
-                        <a href="#">
-                            <img src="../../../assets/images/jpg-image/1.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <!-- Swiper-img end -->
+
+                <swiper 
+                [loop]="true" 
+                [speed]='1500' 
+                [autoplay]="{
+                  delay: 2000,
+                  disableOnInteraction: false
+                }" 
+                [effect]="'fade'" 
+                [slidesPerView]="1"  
+                [navigation]="true"
+                [scrollbar]="{ draggable: true }" 
+                [loop]="true" 
+                [autoplay]="true" 
+                [spaceBetween]="0"
+                class="swiper-banner">
+                    <ng-template swiperSlide>
+                        <!-- Swiper-img start -->
+                        <div class="swipe">
+                            <div class="swipe-img">
+                                <a href="#">
+                                    <img src="../../../assets/images/jpg-image/1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Swiper-img end -->
+                    </ng-template>
+
+                    <ng-template swiperSlide>
+                        <!-- Swiper-img start -->
+                        <div class="swipe">
+                            <div class="swipe-img">
+                                <a href="#">
+                                    <img src="../../../assets/images/jpg-image/02.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Swiper-img end -->
+                    </ng-template>
+
+                    <ng-template swiperSlide>
+                        <!-- Swiper-img start -->
+                        <div class="swipe">
+                            <div class="swipe-img">
+                                <a href="#">
+                                    <img src="../../../assets/images/jpg-image/03.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Swiper-img end -->
+                    </ng-template>
+
+                    <ng-template swiperSlide>
+                        <!-- Swiper-img start -->
+                        <div class="swipe">
+                            <div class="swipe-img">
+                                <a href="#">
+                                    <img src="../../../assets/images/jpg-image/04.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Swiper-img end -->
+                    </ng-template>
+
+                </swiper>
+
             </div>
             <!-- swiper start -->
 
@@ -1244,7 +1301,7 @@
                 <!-- left-side end -->
 
                 <!-- right-sidebar start -->
-                <div class="right-sidebar">
+                <div class="right-sidebar" [class.is-open]="isMenuOpen">
 
                     <div class="right-sidebar-child">
                         <!-- aside-one -->
@@ -1424,8 +1481,11 @@
 </div>
 
 
+<!--------------------------------------------------------------- 
+    use for aside bar show. it's show 992px computer indow screen 
+---------------------------------------------------------------->
 <div class="show-aside-bar">
-    <a (click)="onShowSideBar()" ref="#">
-        {{showSidebar ? 'Open' : 'Close'}}
+    <a (click)="toggleMenu()">
+        {{isMenuOpen ? 'Close' : 'Open'}}
     </a>
 </div>
