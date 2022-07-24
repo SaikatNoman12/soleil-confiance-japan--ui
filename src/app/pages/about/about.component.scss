@@ -73,7 +73,6 @@
 /* ---- consultation-header design end. ---- */
 
 
-
 /* ---- pagination design start ---- */
 .pagination {
     width: 100%;
@@ -92,18 +91,20 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    word-break: break-all;
 }
 
 
-.pagination-child ul li a::before {
+.pagination-child ul li a::after {
     content: "\f054";
     font-family: FontAwesome;
     font-size: 14px;
-    color: #666;
+    color: #765727;
     margin: 0px 11px;
 }
 
-.pagination-child ul li:first-child a::before {
+.pagination-child ul li:last-child a::after {
     content: "";
     display: none;
 }
@@ -111,6 +112,15 @@
 .pagination-child ul li a {
     // margin-right: 10px;
     color: purple;
+    cursor: pointer;
+    display: block;
+    font-family: $font-en-primary-3;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pagination-child ul li a:hover {
+    color: #765727;
     cursor: pointer;
     display: block;
     font-family: $font-en-primary-3;
@@ -130,6 +140,22 @@
         padding: 0px 0px;
     }
 }
+
+
+// @media (max-width:880px) {
+//     .pagination-child ul {
+//         flex-direction: column;
+//         align-items: flex-start;
+//         justify-content: flex-start;
+//     }
+
+
+//     .pagination-child ul li {
+//         margin-bottom: 6px;
+//     }
+
+
+// }
 
 /* ---- pagination design end ---- */
 

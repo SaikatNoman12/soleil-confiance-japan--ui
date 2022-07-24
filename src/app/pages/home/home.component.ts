@@ -1,3 +1,4 @@
+import { CarouselCntrlService } from './../../services/carousel-cntrl.service';
 import { Component, OnInit } from '@angular/core';
 
 // import Swiper core and required modules
@@ -21,8 +22,15 @@ export class HomeComponent implements OnInit {
   isMenuOpen = false;
 
 
+  // sectionBtnActive
+  sectionBtnActive = 'btn2';
 
-  constructor() { }
+
+
+
+  constructor(
+    private carousel: CarouselCntrlService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -188,17 +196,14 @@ export class HomeComponent implements OnInit {
   }
 
 
-  toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
+  onShow(btn: any) {
+      this.sectionBtnActive = btn;
   }
 
 
-  // use for swiper slider
-  // onSwiper([swiper]: any) {
-  //   console.log(swiper);
-  // }
-  // onSlideChange() {
-  // }
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
 
 }

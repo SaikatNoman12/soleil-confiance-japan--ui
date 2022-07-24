@@ -1,3 +1,7 @@
+<div class="header-one">
+    <app-header-one></app-header-one>
+</div>
+
 <div class="about-area">
     <!-- about-header start -->
     <div class="about-header">
@@ -170,9 +174,11 @@
                                                         <!-- a1 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a1')" id="a1">現状をよく知る</a>
+                                                                <a (click)="onAccordionChildShow('a1')"
+                                                                    id="a1">現状をよく知る</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a1'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a1'">
                                                                 <h3>
                                                                     相続税の節税をしたい方は、まずご自分が現在お持ちの財産にいくらの相続税がかかるのかをなるべく正確に知ることからスタートすることをお勧めします。相続税がかかるかかからないかもわからないのに節税策を実行する必要もありませんし、いらぬリスクを背負うことにもなりかねません。節税を考えるなら、今いくらの相続税がかかるから、いくらくらい相続税を減らしたい・・・と、ある程度の目標を持ってスタートしたいものです。
                                                                     <!-- <a href="">
@@ -190,7 +196,8 @@
                                                                     遺産分割案を検討する
                                                                 </a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a2'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a2'">
                                                                 <h3>
                                                                     相続税は原則として、遺産の総額に対して相続税の総額を計算します。この計算の段階では誰がどんな財産を相続しようと課される相続税の総額に違いは出ません。しかし、相続税には財産を取得した人によって様々な特例が設けられています。亡くなった人の居住用や事業用の土地に対する減額特例(小規模宅地の特例)や配偶者に対する税額軽減(二分の一か1億6千万円まで相続税を課さない)などがあります。これらは遺産分割案まで考えてみない
                                                                     <a href="">
@@ -204,9 +211,11 @@
                                                         <!-- a3 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a3')" id="a3">二次相続対策の検討</a>
+                                                                <a (click)="onAccordionChildShow('a3')"
+                                                                    id="a3">二次相続対策の検討</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a3'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a3'">
                                                                 <h3>
                                                                     相続税の検討は財産承継の検討です。世代を超えた節税を検討して、今どうするかを考えていくことがベストです。代表的な例が相続税の配偶者の税額軽減を使うか否かです。配偶者は相続した財産の二分の一か1憶6千万円までの部分は課税されないことになっています。この特例を使って今回の相続税をゼロ円にしたとしても、次の相続が近い配偶者が亡くなった時に、今回の相続で支払う税金より高率な相続税が課されてしまう可能性があります。このような検討を二次相続対策の検討と呼びます。
                                                                     <br>
@@ -221,9 +230,11 @@
                                                         <!-- a4 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a4')" id="a4">相続争い防止対策の実施</a>
+                                                                <a (click)="onAccordionChildShow('a4')"
+                                                                    id="a4">相続争い防止対策の実施</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a4'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a4'">
                                                                 <h3>
                                                                     相続争いと節税は一見無関係のように思われがちですが、相続税の代表的な節税となる特例(小規模宅地の特例・配偶者の税額軽減等)はそのほとんどが、遺産分割を前提として特例の適用を認めています。従って、相続争いが起きて遺産分割が決まらないような事態になると相続税の節税特例のほとんどが利用できずに納税をすることになります。相続争いの防止は節税にもつながります。
                                                                     <br>
@@ -238,9 +249,11 @@
                                                         <!-- a5 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a5')" id="a5">現状をよく知る</a>
+                                                                <a (click)="onAccordionChildShow('a5')"
+                                                                    id="a5">現状をよく知る</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a5'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a5'">
                                                                 <h3>
                                                                     相続財産を減らすことは相続税を減らすことに直結します。相続財産を早めに相続人に移転していくことは誰でも手軽にできる節税策です。暦年贈与の110万円の非課税枠を使った生前贈与はその代表例ですし、贈与税と相続税の税率を比べて贈与税が安い範囲で税金を支払いながら生前贈与する方法もあります。また、贈与の目的によって住宅資金の贈与などの特例を使う方法もあります。
                                                                     <br>
@@ -255,9 +268,11 @@
                                                         <!-- a6 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a6')" id="a6">節税対策の継続</a>
+                                                                <a (click)="onAccordionChildShow('a6')"
+                                                                    id="a6">節税対策の継続</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a6'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a6'">
                                                                 <h3>
                                                                     節税計画の作成は大切ですが、それと同時に、節税計画を実行に移して、さらにそれを継続していくことは大切なことです。節税計画が継続できなくなる要因はいろいろありますが、高齢化社会の中で多くなってきているのが、認知症等の判断能力の低下による計画の停止です。認知症になってしまうと不動産の売却や建設はもちろん預金の移動も自らの意思でできなくなってしまいます。計画を進めるご本人に成年後見人が就くと節税はできなくなります。このような場合に備えて家族信託を組み合わせて節税計画が継続できるように考える方は増えています。
                                                                 </h3>
@@ -288,9 +303,11 @@
                                                         <!-- a7 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a7')" id="a7">現状と納税方法をよく知る</a>
+                                                                <a (click)="onAccordionChildShow('a7')"
+                                                                    id="a7">現状と納税方法をよく知る</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a7'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a7'">
                                                                 <h3>
                                                                     相続税が心配な方は、現状でいくら相続税がかかるのかを具体的に計算してみて、相続税の申告納付期限である10ケ月以内に現金で納付が可能かどうかを調べることからスタートすることが必要です。その上で、現金で納付ができない場合の、相続税の納税資金対策の一つとして延納制度と物納制度も調べてみることお勧めします。
                                                                     <!-- <a href="">
@@ -308,7 +325,8 @@
                                                                     各人別納税資金の検討
                                                                 </a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a8'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a8'">
                                                                 <h3>
                                                                     相続税は、相続財産に対する相続税の総額を計算し、それを各相続人の取得財産に応じて按分して納付税額を計算する仕組みになっています。相続税の納税資金は現金で納付が原則ですから、例えば不動産だけ相続した人にも相続税は現金で割り振られてしまいます。納税資金の検討は、各人別に取得財産を割り当ててみて納付可能かどうかをチェックしながら検討することが大切です。
                                                                     <!-- <a href="">
@@ -322,9 +340,11 @@
                                                         <!-- a9 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a9')" id="a9">生前贈与による納税資金の確保</a>
+                                                                <a (click)="onAccordionChildShow('a9')"
+                                                                    id="a9">生前贈与による納税資金の確保</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a9'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a9'">
                                                                 <h3>
                                                                     相続税の納税資金は、相続財産から支払わなければならないという決まりはありません。相続人がご自分の財産から支払いを準備しておいてもよいわけです。生前贈与の非課税枠の110万円を利用しながら、複数年にわたって納税資金を相続人に生前贈与しておくことも、相続税の節税策及び相続税の納付期限の10ケ月を考えた場合に資金確保の対策として検討に値する方法になります。
                                                                     <!-- <br>
@@ -339,9 +359,11 @@
                                                         <!-- a10 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a10')" id="a10">不動産売却による納税資金の確保</a>
+                                                                <a (click)="onAccordionChildShow('a10')"
+                                                                    id="a10">不動産売却による納税資金の確保</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a10'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a10'">
                                                                 <h3>
                                                                     遊休不動産を納税資金に充てる計画がある場合には、売却時期を節税との関係で検討しておく必要があります。大きく分けると生前に売却した場合と相続発生後に売却した場合でどちらが節税になるのか?
                                                                     また、マイホーム特例に代表される税制上の特例が活かせるタイミングはいつなのか等をよく検討して納税計画を作成することをお勧めします。
@@ -381,9 +403,11 @@
                                                         <!-- a11 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a11')" id="a11">ライフプランから考える寄付</a>
+                                                                <a (click)="onAccordionChildShow('a11')"
+                                                                    id="a11">ライフプランから考える寄付</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a11'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a11'">
                                                                 <h3>
                                                                     最近、ご自分の財産から寄付をしたい方、あるいは遺産の中から寄付をしたい方が増えてきています。寄付は生前贈与と同様にご自分の財産を反対給付なしに(見返りなく)他に差し上げてしまうことになります。ご自分の収入や財産の中からどのくらいを生前贈与や寄付に充てられるのかを、ライフプランシート(ご自分の生前の財産収支計画)に落とし込んで計画してみることをお勧めします。予算を決めて寄付先を決めて楽しく寄付をしていただければと思います。
                                                                     <!-- <a href="">
@@ -401,7 +425,8 @@
                                                                     生前寄付の方法と税制
                                                                 </a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a12'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a12'">
                                                                 <h3>
                                                                     生前にご自分の財産を寄付する場合に、税制上の優遇措置が受けられる場合と受けられない場合があります。寄付が税制上の優遇措置の対象になれば、ご自分の支払う予定の所得税からその全額あるいは一部が控除されます。税制上の優遇措置を受ける場合には事前に調べておくことや、領収書の保存、確定申告による申告を忘れずにすることが必要になります。
                                                                     <!-- <a href="">
@@ -415,9 +440,11 @@
                                                         <!-- a13 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a13')" id="a13">相続と寄付の方法と税制</a>
+                                                                <a (click)="onAccordionChildShow('a13')"
+                                                                    id="a13">相続と寄付の方法と税制</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a13'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a13'">
                                                                 <h3>
                                                                     相続発生後に遺産を寄付したい場合には、遺言により直接寄付先を指定して寄付する方法と相続人が寄付する方法の大きく分けて二つの方法があります。どちらの方法でも相続税がかからない寄付とすることは可能ですが、寄付先が公益法人であることが要件であったり、申告期限までに実行されることが要件であったりするので、生前に十分に検討してお子必要があります。
                                                                     <!-- <br>
@@ -470,9 +497,11 @@
                                                         <!-- a15 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a15')" id="a15">現状と財産の分け方をよく知る</a>
+                                                                <a (click)="onAccordionChildShow('a15')"
+                                                                    id="a15">現状と財産の分け方をよく知る</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a15'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a15'">
                                                                 <h3>
                                                                     財産の分け方を知るためにはご自分の財産の一覧表(財産目録)を作成してみることが第一歩です。その際に生命保険の契約一覧を作成して死亡保険金の受取人も整理してみてください。その上で、財産をそのまま名義変更するのか、換金して(売却・解約)して分けるのか、共同で相続させるのか等の法的な遺産分割の方法、法定相続分で分けた場合、遺言を作った場合の遺留分も知っておくことが大切です。
                                                                     <!-- <a href="">
@@ -490,7 +519,8 @@
                                                                     遺産分割案を検討する
                                                                 </a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a16'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a16'">
                                                                 <h3>
                                                                     ご自身の相続が今発生したとしたたら、財産をどのように分けたいのかをシミュレーションしてみることが必要です。その場合に、相続にかかるコストの、相続税、登記費用その他遺産整理費用等を織り込んで考えることがポイントです。遺産の中に処分が難しい不動産(いわゆる負の財産)がある場合にはそれらの処分費も含めた分割案を検討することが相続争いを防止するカギになることも少なくありません。
                                                                     <!-- <a href="">
@@ -504,9 +534,11 @@
                                                         <!-- a17 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a17')" id="a17">相続争い防止対策の実施</a>
+                                                                <a (click)="onAccordionChildShow('a17')"
+                                                                    id="a17">相続争い防止対策の実施</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a17'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a17'">
                                                                 <h3>
                                                                     相続争いの防止対策は、財産を築き上げてあるいは守ってきた方の承継の遺志を明確にすることが第一で、その遺志に沿った場合の争いになる可能性をよく知り、対策を法的に有効な形で遺しておくことが大切です。死後に有効になる遺言はもちろんですが、今は生前から相続後を想定した財産管理を実現できる家族信を併用する方が増えています。家族信託は相続争いをより早くスタートさせる方法でもあります。
                                                                     <!-- <br>
@@ -615,9 +647,11 @@
                                                         <!-- a18 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a18')" id="a18">生前にできること</a>
+                                                                <a (click)="onAccordionChildShow('a18')"
+                                                                    id="a18">生前にできること</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a18'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a18'">
                                                                 <h3>
                                                                     相続は人の一生の精算になります・・・相続が発生すると驚くほど多くの手続きが発生し、ご家族がその煩雑さにお困りになり、また相続の過程で親族間あるいは税務署と争いが起きてしまうこともあるのです。それらの事柄は実は生前に対策しておけばほとんどの事が問題にならずに済むことが多いのです。生前にできることを、多くの経験をしている相続コーディネーターと共にご準備いただければと思います。
                                                                     <!-- <a href="">
@@ -635,7 +669,8 @@
                                                                     自分の死後を託す方法
                                                                 </a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a19'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a19'">
                                                                 <h3>
                                                                     自分が作ってきた、あるいは先祖から繋いできた財産を、自分の想いともに次代に承継する希望を多くの方が形に表しています。多くの方が遺言を遺し、最近では家族信託でつなぐ方が増えてきています。またそれ以上に、遺言や家族信託にしておいてくれれば・・・と悔やまれる事例に接することも多くなっています。どうかご自身も安心して暮らせるように万一の時の準備はしておきたいものです。
                                                                     <!-- <a href="">
@@ -651,7 +686,8 @@
                                                             <div class="dropdown-child-title">
                                                                 <a (click)="onAccordionChildShow('a20')" id="a20">遺言</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a20'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a20'">
                                                                 <h3>
                                                                     遺言を残すことは相続対策の基本です。相続の争いは財産額の多い少ないにかかわらず発生します。また、相続税の節税特例もほとんどが遺産分割を適用要件としていますから、遺言は有効になります。遺言は財産をもらう人の了解を得ることなくご自分の意志で書くことができるので、思い立った時に専門家のアドバイスを受けながら作成しておくことをお勧めいたします。
                                                                     <!-- <br>
@@ -666,9 +702,11 @@
                                                         <!-- a21 -->
                                                         <li>
                                                             <div class="dropdown-child-title">
-                                                                <a (click)="onAccordionChildShow('a21')" id="a21">家族信託</a>
+                                                                <a (click)="onAccordionChildShow('a21')"
+                                                                    id="a21">家族信託</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a21'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a21'">
                                                                 <h3>
                                                                     家族にご自分の財産を預けて(信託して)、認知症等でご自分の判断能力が無くなってしまっても家族が困らないように財産管理をしてもらえる契約です、生前にご自分の財産の名義を家族名義に変えてしまっても信託契約なので贈与税の心配もなく、遺言の代わりにもなりますし、相続手続きを簡素化することも可能な新しい相続の形です。成年後見制度に比べて費用を抑えることもできます。
                                                                     <!-- <br>
@@ -685,7 +723,8 @@
                                                             <div class="dropdown-child-title">
                                                                 <a *ngIf="accordionChildShow === 'a22'">死後事務委任契約</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a22'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a22'">
                                                                 <h3>
                                                                     ご自分が亡くなった後の、葬儀から始まって、遺品整理、入院費等の債務整理、公共料金やクレジットカートその他契約の解約整理等の事務手続きを、生前に委任しておく契約です。これら手続きをやっていただけるご親族がいない場合や、いてもご迷惑をかけたくない場合にご自身の考えでどのようにするのかを決めて委託しておくことができる契約です。
                                                                     <!-- <br>
@@ -814,10 +853,12 @@
                                                         <!-- a23 -->
                                                         <li>
                                                             <div class="dropdown-child-title dropdown-child-title2">
-                                                                <a (click)="onAccordionChildShow('a23')" id="a23"> <span class="number">1</span>
+                                                                <a (click)="onAccordionChildShow('a23')" id="a23"> <span
+                                                                        class="number">1</span>
                                                                     臨終に立ち会った医師から死亡診断書を発行してもらう（病院で亡くなった場合）</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a23'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a23'">
                                                                 <h3>
                                                                     死亡診断書は、火葬許可証の発行など以後の諸手続きに必要となります。
                                                                     また、被相続人が亡くなるまでの医療費は相続税申告において債務として計上されます。
@@ -832,10 +873,12 @@
                                                         <!-- a24 -->
                                                         <li>
                                                             <div class="dropdown-child-title dropdown-child-title2">
-                                                                <a (click)="onAccordionChildShow('a24')" id="a24"> <span class="number">2</span>
+                                                                <a (click)="onAccordionChildShow('a24')" id="a24"> <span
+                                                                        class="number">2</span>
                                                                     葬儀会社への連絡、ご遺体搬送の手配をする</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a24'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a24'">
                                                                 <h3>
                                                                     予め葬儀会社が決まっていれば、ご遺体の安置場所を自宅もしくは専用の安置施設のどちらに搬送するか葬儀会社に伝えます。葬儀会社が決まっていなければ、葬儀会社を探して連絡することになります。
                                                                     <!-- <a href="">
@@ -849,10 +892,12 @@
                                                         <!-- a25 -->
                                                         <li>
                                                             <div class="dropdown-child-title dropdown-child-title2">
-                                                                <a (click)="onAccordionChildShow('a25')" id="a24"> <span class="number">3</span>
+                                                                <a (click)="onAccordionChildShow('a25')" id="a24"> <span
+                                                                        class="number">3</span>
                                                                     菩提寺の僧侶へ連絡や葬儀の段取り</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a25'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a25'">
                                                                 <h3>
                                                                     葬儀会社が決まったら喪主を決めます。葬儀会社と葬儀の段取りを打ち合わせをして菩提寺の僧侶へ連絡します。
                                                                     菩提寺がない場合や分からない場合には葬儀会社に相談するとよいでしょう。
@@ -868,10 +913,12 @@
                                                         <!-- a26 -->
                                                         <li>
                                                             <div class="dropdown-child-title dropdown-child-title2">
-                                                                <a (click)="onAccordionChildShow('a26')" id="a26"> <span class="number">4</span>
+                                                                <a (click)="onAccordionChildShow('a26')" id="a26"> <span
+                                                                        class="number">4</span>
                                                                     役所へ死亡届を提出する</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a26'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a26'">
                                                                 <h3>
                                                                     ご家族やご親族などが亡くなったら、死亡届の提出が必要です。
                                                                     死亡届は、①の死亡診断書と同じ1枚の用紙の左側が死亡届の欄ですので必要事項を記入します。
@@ -888,10 +935,12 @@
                                                         <!-- a27 -->
                                                         <li>
                                                             <div class="dropdown-child-title dropdown-child-title2">
-                                                                <a (click)="onAccordionChildShow('a27')" id="a27"> <span class="number">5</span>
+                                                                <a (click)="onAccordionChildShow('a27')" id="a27"> <span
+                                                                        class="number">5</span>
                                                                     役所で火葬許可証を発行してもらう</a>
                                                             </div>
-                                                            <div class="dropdown-child-data" *ngIf="accordionChildShow === 'a27'">
+                                                            <div class="dropdown-child-data"
+                                                                *ngIf="accordionChildShow === 'a27'">
                                                                 <h3>
                                                                     遺体を火葬、埋葬するためには、役所の許可が必要です。
                                                                     死亡届が受理されると、住民票に本人の死亡が記載されます。この「本人の死亡」が住民票に記載されないと死亡が証明されないため火葬することができません。

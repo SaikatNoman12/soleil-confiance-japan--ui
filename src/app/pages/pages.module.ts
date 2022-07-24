@@ -1,3 +1,4 @@
+import { HeaderTwoModule } from './../core/header-two/header-two.module';
 import { HeaderBottomModule } from './../core/header-bottom/header-bottom.module';
 import { HeaderOneModule } from './../core/header-one/header-one.module';
 
@@ -18,7 +19,8 @@ import { PagesComponent } from './pages.component';
     PagesRoutingModule,
     FooterModule,
     HeaderOneModule,
-    HeaderBottomModule
+    HeaderBottomModule,
+    HeaderTwoModule
   ]
 })
 export class PagesModule { }

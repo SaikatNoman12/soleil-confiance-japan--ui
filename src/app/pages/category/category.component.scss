@@ -1,0 +1,609 @@
+@import'../../../theme/variables';
+
+
+/* ---- category-area design start:- ---- */
+.category-area {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ---- category-area design end. ---- */
+
+
+/* ---- consultation-header design start:- ---- */
+.category-header {
+    width: 100%;
+    background-image: url(../../../assets/images/jpg-image/wisdom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+    padding-top: 30px;
+}
+
+.header-child {
+    width: 100%;
+    padding: 0px 15px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-child h1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+@media (max-width:700px) {
+    .header-child {
+        padding: 0px 0px;
+    }
+
+}
+
+@media (max-width:584px) {
+
+    .header-child h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width:476px) {
+    .header-child h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:416px) {
+    .header-child h1 {
+        font-size: 30px;
+    }
+
+}
+
+/* ---- consultation-header design end. ---- */
+
+
+
+/* ---- pagination design start ---- */
+.pagination {
+    width: 100%;
+    background: #f9ecc9;
+    padding: 10px;
+}
+
+.pagination-child {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.pagination-child ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.pagination-child ul li a::after {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #765727;
+    margin: 0px 11px;
+}
+
+.pagination-child ul li:last-child a::after {
+    content: "";
+    display: none;
+}
+
+.pagination-child ul li a {
+    // margin-right: 10px;
+    color: purple;
+    cursor: pointer;
+    display: block;
+    font-family: $font-en-primary-3;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pagination-child ul li a:hover {
+    color: #765727;
+}
+
+.pagination-child ul li:last-child a {
+    margin-right: 10px;
+    cursor: context-menu;
+    color: #666;
+}
+
+@media (max-width:700px) {
+
+    .pagination-child {
+        padding: 0px 0px;
+    }
+}
+
+
+@media (max-width:556px) {
+    .pagination-child ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+
+    .pagination-child ul li {
+        margin-bottom: 6px;
+    }
+
+
+}
+
+/* ---- pagination design end ---- */
+
+
+
+/* ---- about-area-child design start ---- */
+.category-area-child {
+    width: 100%;
+    margin-top: 40px;
+    height: auto;
+}
+
+.category-child {
+    display: grid;
+    padding: 0px 15px;
+    grid-template-columns: 80% 20%;
+    height: auto;
+    // position: relative;
+}
+
+
+@media (max-width:992px) {
+    .category-child {
+        max-width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:700px) {
+    .category-child {
+        padding: 0px 0px;
+        margin: auto;
+    }
+}
+
+.all-pro-cards {
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    grid-gap: 20px 0px;
+    margin-bottom: 30px;
+}
+
+@media (max-width:767px) {
+    .all-pro-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px 20px;
+    }
+}
+@media (max-width:556px) {
+    .all-pro-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px 0px;
+    }
+}
+
+.card {
+    width: 100%;
+}
+
+.card a {
+    width: 100%;
+    cursor: pointer;
+    padding: 20px 0px;
+    border-bottom: 1px dotted black;
+}
+
+@media (max-width:767px) {
+    .card a {
+        padding-top: 0px;
+        border: 1px dotted black;
+    }
+}
+
+.card a .card-child {
+    // width: 100%;
+    grid-gap: 0px 20px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+
+}
+
+@media (max-width:1170px) {
+
+    .card a .card-child {
+        grid-template-columns: 35% 65%;
+    }
+}
+
+@media (max-width:848px) {
+
+    .card a .card-child {
+        grid-template-columns: 35% 65%;
+    }
+}
+
+@media (max-width:767px) {
+
+    .card a .card-child {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px 0px ;
+    }
+}
+
+.card-child .card-img {
+    width: 100%;
+    height: 200px;
+}
+
+.card a:hover .card-child .card-img img {
+    opacity: .7;
+}
+
+.card-child .card-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+@media (max-width:556px) {
+
+    .card-child .card-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-child .card-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.card-data h3 {
+    background-color: #b56629;
+    color: #fff;
+    font-family: $font-en-primary-3;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0px 10px;
+
+}
+
+.card-data h2 {
+    color: #765727;
+    font-family: $font-en-primary-3;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+@media (max-width:767px) {
+    .card-data{
+        padding: 6px;
+    }
+}
+
+
+/* -- left side design start:- -- */
+.left-side {
+    background-color: transparent;
+    margin-right: 20px;
+    height: auto;
+}
+
+@media (max-width:992px) {
+    .left-side {
+        margin-right: 0px;
+    }
+}
+
+
+
+/*  free-consultation-header start */
+.free-consultation-header {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.heder-title span {
+    display: block;
+    background-color: #ee8888 !important;
+    color: #fff !important;
+    padding: 20px 0px;
+    text-align: center;
+    font-family: $font-en-primary-3;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+
+.heder-title span::before {
+    position: absolute;
+    content: '';
+    top: 99%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-top: 30px solid #ef8889 !important;
+}
+
+
+/* -- left side design end. -- */
+
+
+/* -- right-sidebar design start:- -- */
+.right-sidebar {
+    background-color: #ffff;
+    height: auto;
+    width: 100%;
+    position: relative;
+    // top: 0px;
+}
+
+
+.right-sidebar aside {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+// aside one
+
+/* global use for sidebar(aside) */
+.right-sidebar aside:nth-child(1) {
+    background-color: #765727;
+}
+
+.right-sidebar aside ul {
+    list-style: none;
+}
+
+.right-sidebar aside:nth-child(1) ul li {
+    display: block;
+    width: 100%;
+}
+
+/* separate use for sidebar(aside)-1 */
+.right-sidebar aside:nth-child(1) ul:first-child li a {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.right-sidebar aside:nth-child(1) ul li a:hover {
+    opacity: .7;
+}
+
+.right-sidebar aside:nth-child(1) ul li a img {
+    width: 100%;
+}
+
+.right-sidebar aside:nth-child(1) ul:last-child li a {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+
+/* separate use for sidebar(aside)-2 */
+.aside-title-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.aside-title-image img {
+    width: 60%;
+}
+
+.right-sidebar aside:nth-child(2) {
+    background-color: #fbf2e5;
+    border: 1px solid #765727;
+}
+
+.right-sidebar aside:nth-child(2) ul li {
+    display: block;
+    width: 100%;
+}
+
+.right-sidebar aside:nth-child(2) ul:first-child li a {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.right-sidebar aside:nth-child(2) ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 20px 0px;
+    color: #ffff;
+    font-size: 16px;
+    font-family: $font-en-primary-3;
+    font-weight: 500;
+    background-color: #765727;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    letter-spacing: .5px;
+}
+
+.right-sidebar aside:nth-child(2) ul li a::before {
+    content: url(../../../assets/images/png-image/arr.png);
+    // display: flex;
+    margin-top: 3px;
+    margin-right: 8px;
+}
+
+.right-sidebar aside:nth-child(2) ul li a:hover {
+    background-color: #96733b;
+}
+
+// search-bar
+.search-bar {
+    margin-top: 9px;
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid #765727;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0px 6px 0px;
+}
+
+.input-search {
+    width: 75%;
+}
+
+.input-search input {
+    width: 100%;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px;
+    line-height: 42px;
+    padding: 0px 10px;
+    color: #333;
+    font-family: $font-en-primary-3;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.search-icon {
+    width: 22%;
+    border-left: 1px solid #765727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.search-icon button {
+    border: 0px;
+    outline: 0px;
+    background-color: transparent !important;
+    text-align: center;
+}
+
+.search-icon button i {
+    color: #765727 !important;
+    font-size: 16px;
+    padding: 2px 2px 0px 0px;
+    position: relative;
+}
+
+
+/* separate use for sidebar(aside)-3 */
+.right-sidebar aside:nth-child(3) {
+    background-color: #ececec;
+}
+
+
+.right-sidebar aside:nth-child(3) ul li a:hover {
+    opacity: .7;
+}
+
+.right-sidebar aside:nth-child(3) ul li a img {
+    width: 100%;
+
+}
+
+
+@media (max-width:992px) {
+
+    .right-sidebar {
+        display: none;
+        // height: 100vh !important;
+        background-color: #fff;
+        // border-bottom: 3px solid red;
+        box-shadow: 16px -187px 50px 200px rgb(0 0 0 / 100%);
+
+        // use for aside show
+        &.is-open {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 111111;
+        }
+    }
+
+}
+
+
+
+/* ----- show aside bar design start ----- */
+.show-aside-bar {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: inline-block;
+    z-index: 1111111111;
+    display: none;
+
+}
+
+
+.show-aside-bar a {
+    width: 75px;
+    height: 75px;
+    text-transform: uppercase;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-en-primary-3;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffff;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px 0px #333;
+    cursor: pointer;
+}
+
+
+@media (max-width:992px) {
+    .show-aside-bar {
+        display: block;
+    }
+}
+
+/* -- right-sidebar design end. -- */
+
+
+
+/* ---- about-area-child design end. ---- */

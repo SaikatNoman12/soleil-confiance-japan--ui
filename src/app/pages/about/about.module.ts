@@ -1,3 +1,4 @@
+import { HeaderOneModule } from './../../core/header-one/header-one.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,7 +14,8 @@ import { AboutComponent } from './about.component';
   imports: [
     CommonModule,
     AboutRoutingModule,
-    RouterModule
+    RouterModule,
+    HeaderOneModule
   ]
 })
 export class AboutModule { }

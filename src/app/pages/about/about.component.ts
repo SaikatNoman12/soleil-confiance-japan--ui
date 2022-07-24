@@ -12,12 +12,17 @@ export class AboutComponent implements OnInit {
   showSidebar = true;
 
 
-  /* accordionShow */ 
+  /* accordionShow */
   accordionShow: any = '';
 
   /* accordionChildShow dropdown */
   accordionChildShow: any = '';
-  
+
+
+  // use for sidebar toggle;
+  isMenuOpen = false;
+
+
 
 
   constructor() { }
@@ -192,7 +197,7 @@ export class AboutComponent implements OnInit {
   }
 
 
-
+  // Accordion 
   onAccordionShow(id: any) {
     if (this.accordionShow === id) {
       this.accordionShow = '';
@@ -212,10 +217,10 @@ export class AboutComponent implements OnInit {
     }
   }
 
-  isMenuOpen = false;
 
-  toggleMenu(): void{
-    this.isMenuOpen =! this.isMenuOpen; 
+  // use for side var toggle;
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 }

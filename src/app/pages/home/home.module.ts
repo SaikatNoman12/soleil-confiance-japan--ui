@@ -1,3 +1,5 @@
+import { HeaderOneModule } from './../../core/header-one/header-one.module';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -14,7 +16,9 @@ import { SwiperModule } from 'swiper/angular';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SwiperModule
+    SwiperModule,
+    RouterModule,
+    HeaderOneModule
   ]
 })
 export class HomeModule { }

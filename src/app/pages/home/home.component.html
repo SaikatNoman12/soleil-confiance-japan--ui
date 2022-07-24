@@ -1,74 +1,70 @@
+<div class="header-one">
+    <app-header-one></app-header-one>
+</div>
 <div class="home-area">
     <!-- home header start -->
     <div class="home-header">
         <div class="container">
             <!-- swiper start -->
-            <div class="swiper">
+            <div class="swiperr">
 
-                <swiper 
-                [loop]="true" 
-                [speed]='1500' 
-                [autoplay]="{
-                  delay: 2000,
-                  disableOnInteraction: false
-                }" 
-                [effect]="'fade'" 
-                [slidesPerView]="1"  
-                [navigation]="true"
-                [scrollbar]="{ draggable: true }" 
-                [loop]="true" 
-                [autoplay]="true" 
-                [spaceBetween]="0"
-                class="swiper-banner">
-                    <ng-template swiperSlide>
-                        <!-- Swiper-img start -->
-                        <div class="swipe">
-                            <div class="swipe-img">
-                                <a href="#">
-                                    <img src="../../../assets/images/jpg-image/1.jpg" alt="">
-                                </a>
+                <div class="swiper-parent">
+
+                    <swiper [loop]="true" [speed]='1500' [autoplay]="{
+                        delay: 2000,
+                        disableOnInteraction: false
+                    }" [effect]="'fade'" [slidesPerView]="1" [navigation]="true" [loop]="true" [autoplay]="true"
+                        [spaceBetween]="0" class="swiper-banner">
+                        <ng-template swiperSlide>
+                            <!-- Swiper-img start -->
+                            <div class="swipe">
+                                <div class="swipe-img">
+                                    <a href="#">
+                                        <img src="../../../assets/images/jpg-image/1.jpg" alt="">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Swiper-img end -->
-                    </ng-template>
+                            <!-- Swiper-img end -->
+                        </ng-template>
 
-                    <ng-template swiperSlide>
-                        <!-- Swiper-img start -->
-                        <div class="swipe">
-                            <div class="swipe-img">
-                                <a href="#">
-                                    <img src="../../../assets/images/jpg-image/02.jpg" alt="">
-                                </a>
+                        <ng-template swiperSlide>
+                            <!-- Swiper-img start -->
+                            <div class="swipe">
+                                <div class="swipe-img">
+                                    <a href="#">
+                                        <img src="../../../assets/images/jpg-image/02.jpg" alt="">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Swiper-img end -->
-                    </ng-template>
+                            <!-- Swiper-img end -->
+                        </ng-template>
 
-                    <ng-template swiperSlide>
-                        <!-- Swiper-img start -->
-                        <div class="swipe">
-                            <div class="swipe-img">
-                                <a href="#">
-                                    <img src="../../../assets/images/jpg-image/03.jpg" alt="">
-                                </a>
+                        <ng-template swiperSlide>
+                            <!-- Swiper-img start -->
+                            <div class="swipe">
+                                <div class="swipe-img">
+                                    <a href="#">
+                                        <img src="../../../assets/images/jpg-image/03.jpg" alt="">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Swiper-img end -->
-                    </ng-template>
+                            <!-- Swiper-img end -->
+                        </ng-template>
 
-                    <ng-template swiperSlide>
-                        <!-- Swiper-img start -->
-                        <div class="swipe">
-                            <div class="swipe-img">
-                                <a href="#">
-                                    <img src="../../../assets/images/jpg-image/04.jpg" alt="">
-                                </a>
+                        <ng-template swiperSlide>
+                            <!-- Swiper-img start -->
+                            <div class="swipe">
+                                <div class="swipe-img">
+                                    <a href="#">
+                                        <img src="../../../assets/images/jpg-image/04.jpg" alt="">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Swiper-img end -->
-                    </ng-template>
+                            <!-- Swiper-img end -->
+                        </ng-template>
 
-                </swiper>
+                    </swiper>
+                </div>
 
             </div>
             <!-- swiper start -->
@@ -89,12 +85,12 @@
                         <!-- section-btn start -->
                         <div class="section-btns">
                             <div class="section-btn">
-                                <a (click)="onShowConsult()">
+                                <a (click)="onShow('btn1')" [class.active-btn]="sectionBtnActive === 'btn1'" id="btn1">
                                     相談する
                                 </a>
                             </div>
                             <div class="section-btn">
-                                <a (click)="onShowInvestigate()" class="active-btn">
+                                <a (click)="onShow('btn2')" [class.active-btn]="sectionBtnActive === 'btn2'" id="btn2">
                                     調べる
                                 </a>
                             </div>
@@ -103,7 +99,7 @@
 
                         <!------------------ consult area start ------------------>
                         <!-- details-area start -->
-                        <div class="details-area" *ngIf="showConsult">
+                        <div class="details-area" *ngIf="sectionBtnActive === 'btn1'">
                             <div class="first">
                                 <div class="first-data">
                                     <div class="details">
@@ -171,994 +167,45 @@
                                 <div class="free-consultation-cards">
 
                                     <!-- one -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月19日(火)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>港北公会堂</h3>
-                                                <h3>2号会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    港北区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
 
-                                    <!-- two -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月20日(水)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>宮前市民館</h3>
-                                                <h3>第２会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    宮前区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>
-                                                    相談時間帯は6部構成
-                                                </p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <ng-container *ngFor="let data of [1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8]">
 
+                                        <div class="free-consultation-card">
+                                            <div class="card-header">
+                                                <div class="card-title">
+                                                    <span>
+                                                        7月19日(火)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="card-details">
+                                                <div class="detail-title">
+                                                    <h3>港北公会堂</h3>
+                                                    <h3>2号会議室</h3>
+                                                </div>
+                                                <div class="circle-text">
+                                                    <p>
+                                                        横浜市
+                                                    </p>
+                                                    <p>
+                                                        港北区
+                                                    </p>
+                                                </div>
+                                                <div class="number-text">
+                                                    <h2>10:00～17:00</h2>
+                                                    <p>相談時間帯は6部構成</p>
+                                                    <p>お好きな時間帯から選択出来ます</p>
+                                                </div>
+                                            </div>
+                                            <div class="card-btn">
+                                                <a routerLink="../musashikosugi"href="">
+                                                    詳細はこちら
+                                                    <i class="fas fa-chevron-circle-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
 
-                                    <!-- three -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月20日(水)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>保険相談サロンFLPアトレ大森店</h3>
-                                                <h3>サロン</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    東京都
-                                                </p>
-                                                <p>
-                                                    大田区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:30～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- four -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月21日(木)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>ひまわりの郷</h3>
-                                                <h3>会議室B</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    港南区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>13:00～17:00</h2>
-                                                <p>相談時間帯は4部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- five -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月23日(土)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>港北公会堂</h3>
-                                                <h3>2号会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    港北区
-                                                </p>
-                                                <p>
-                                                    武蔵小杉
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- six -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月23日(土)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>横浜相談室</h3>
-                                                <h3>横浜相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    中区
-                                                </p>
-                                                <p>
-                                                    横浜駅沿線
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- seven -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月23日(土)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>長野相談室</h3>
-                                                <h3>税理士法人共同会計社　長野事務所</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    長野県
-                                                </p>
-                                                <p>
-                                                    長野市
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- eight -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>武蔵小杉相談室</h3>
-                                                <h3>武蔵小杉相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    中原区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- nine -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>横浜相談室</h3>
-                                                <h3>横浜相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    中区
-                                                </p>
-                                                <p>
-                                                    横浜駅沿線
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- ten -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>上越相談室</h3>
-                                                <h3>税理士法人共同会計社　上越事務所</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    長野県
-                                                </p>
-                                                <p>
-                                                    長野市
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- ten -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>武蔵小杉相談室</h3>
-                                                <h3>武蔵小杉相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    中原区
-                                                </p>
-                                                <p>
-                                                    武蔵小杉
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- eleven -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>武蔵小杉相談室</h3>
-                                                <h3>武蔵小杉相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    中原区
-                                                </p>
-                                                <p>
-                                                    武蔵小杉
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- 12 -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月20日(水)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>宮前市民館</h3>
-                                                <h3>第２会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    宮前区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>
-                                                    相談時間帯は6部構成
-                                                </p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- one -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月19日(火)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>港北公会堂</h3>
-                                                <h3>2号会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    港北区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- two -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月20日(水)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>宮前市民館</h3>
-                                                <h3>第２会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    宮前区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>
-                                                    相談時間帯は6部構成
-                                                </p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- three -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月20日(水)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>保険相談サロンFLPアトレ大森店</h3>
-                                                <h3>サロン</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    東京都
-                                                </p>
-                                                <p>
-                                                    大田区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:30～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- four -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月21日(木)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>ひまわりの郷</h3>
-                                                <h3>会議室B</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    港南区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>13:00～17:00</h2>
-                                                <p>相談時間帯は4部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- five -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月23日(土)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>港北公会堂</h3>
-                                                <h3>2号会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    港北区
-                                                </p>
-                                                <p>
-                                                    武蔵小杉
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- six -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月23日(土)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>横浜相談室</h3>
-                                                <h3>横浜相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    中区
-                                                </p>
-                                                <p>
-                                                    横浜駅沿線
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- seven -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月23日(土)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>長野相談室</h3>
-                                                <h3>税理士法人共同会計社　長野事務所</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    長野県
-                                                </p>
-                                                <p>
-                                                    長野市
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- eight -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>武蔵小杉相談室</h3>
-                                                <h3>武蔵小杉相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    中原区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- nine -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>横浜相談室</h3>
-                                                <h3>横浜相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    横浜市
-                                                </p>
-                                                <p>
-                                                    中区
-                                                </p>
-                                                <p>
-                                                    横浜駅沿線
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- ten -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>上越相談室</h3>
-                                                <h3>税理士法人共同会計社　上越事務所</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    長野県
-                                                </p>
-                                                <p>
-                                                    長野市
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>相談時間帯は6部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- ten -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>武蔵小杉相談室</h3>
-                                                <h3>武蔵小杉相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    中原区
-                                                </p>
-                                                <p>
-                                                    武蔵小杉
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- eleven -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月24日(日)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>武蔵小杉相談室</h3>
-                                                <h3>武蔵小杉相談室　会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    中原区
-                                                </p>
-                                                <p>
-                                                    武蔵小杉
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～20:00</h2>
-                                                <p>相談時間帯は9部構成</p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- 12 -->
-                                    <div class="free-consultation-card">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <span>
-                                                    7月20日(水)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="card-details">
-                                            <div class="detail-title">
-                                                <h3>宮前市民館</h3>
-                                                <h3>第２会議室</h3>
-                                            </div>
-                                            <div class="circle-text">
-                                                <p>
-                                                    川崎市
-                                                </p>
-                                                <p>
-                                                    宮前区
-                                                </p>
-                                            </div>
-                                            <div class="number-text">
-                                                <h2>10:00～17:00</h2>
-                                                <p>
-                                                    相談時間帯は6部構成
-                                                </p>
-                                                <p>お好きな時間帯から選択出来ます</p>
-                                            </div>
-                                        </div>
-                                        <div class="card-btn">
-                                            <a href="#">
-                                                詳細はこちら
-                                                <i class="fas fa-chevron-circle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    </ng-container>
 
 
                                 </div>
@@ -1207,7 +254,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-btn">
-                                                <a href="#">
+                                                <a routerLink="../place" href="">
                                                     詳細はこちら
                                                     <i class="fas fa-chevron-circle-right"></i>
                                                 </a>
@@ -1227,7 +274,7 @@
 
                         <!------------------ investigate area start ------------------>
                         <!-- details-area start -->
-                        <div class="details-area" *ngIf="showInvestigate">
+                        <div class="details-area" *ngIf="sectionBtnActive === 'btn2'">
                             <div class="first3">
                                 <div class="first-data3">
                                     <div class="details3">
@@ -1273,11 +320,11 @@
                                             </div>
                                             <div class="card-details3">
                                                 <div class="detail-img3">
-                                                    <a href="#"><img src="{{data.img}}" alt=""></a>
+                                                    <a routerLink="/category"><img src="{{data.img}}" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="card-btn3">
-                                                <a href="#">
+                                                <a routerLink="/category" href="">
                                                     詳細はこちら
                                                     <i class="fas fa-chevron-circle-right"></i>
                                                 </a>

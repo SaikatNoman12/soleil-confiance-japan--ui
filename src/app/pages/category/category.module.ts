@@ -1,20 +1,19 @@
 import { HeaderOneModule } from './../../core/header-one/header-one.module';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ConsultationRoutingModule } from './consultation-routing.module';
-import { ConsultationComponent } from './consultation.component';
+import { CategoryRoutingModule } from './category-routing.module';
+import { CategoryComponent } from './category.component';
 
 
 @NgModule({
   declarations: [
-    ConsultationComponent
+    CategoryComponent
   ],
   imports: [
     CommonModule,
-    ConsultationRoutingModule,
+    CategoryRoutingModule,
     HeaderOneModule
   ]
 })
-export class ConsultationModule { }
+export class CategoryModule { }

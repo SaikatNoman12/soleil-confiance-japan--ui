@@ -1,20 +1,19 @@
 import { HeaderOneModule } from './../../core/header-one/header-one.module';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ConsultationRoutingModule } from './consultation-routing.module';
-import { ConsultationComponent } from './consultation.component';
+import { MusashikosugiRoutingModule } from './musashikosugi-routing.module';
+import { MusashikosugiComponent } from './musashikosugi.component';
 
 
 @NgModule({
   declarations: [
-    ConsultationComponent
+    MusashikosugiComponent
   ],
   imports: [
     CommonModule,
-    ConsultationRoutingModule,
+    MusashikosugiRoutingModule,
     HeaderOneModule
   ]
 })
-export class ConsultationModule { }
+export class MusashikosugiModule { }
